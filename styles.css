@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #f5f5dc;
-    overflow: hidden; 
+    overflow-x: hidden; /* Prevents side-to-side scrolling */
     overflow-y: auto; 
     padding: 20px 0;
 }
@@ -47,6 +47,7 @@ body {
     width: 85%;
     position: relative;
     z-index: 10;
+    margin: 20px auto; /* Ensures it doesn't hug the top edge */
 }
 
 .flip-card {
@@ -268,4 +269,65 @@ p {
 
 @keyframes flyUp {
     to { transform: translateY(-120vh); }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (PHONES)
+   ========================================= */
+@media (max-width: 600px) {
+    .card {
+        width: 90%; /* Make the card wider on small screens */
+        padding: 25px 15px; /* Reduce the huge padding inside the card */
+        margin-top: 70px; /* Make room so the music button doesn't cover the content */
+    }
+
+    #musicToggle {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2em; /* Shrink the music button slightly */
+    }
+
+    .countdown-box {
+        font-size: 1.4em; /* Stop the timer from breaking into two weird lines */
+        padding: 10px;
+    }
+
+    #queen-text {
+        font-size: 1.1em;
+        letter-spacing: 2px;
+    }
+
+    /* Scale down headings so they fit nicely */
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.3em; }
+
+    p { font-size: 1em; } /* Slightly smaller text for better readability on phones */
+
+    .flip-card {
+        width: 130px; /* Smaller photo card */
+        height: 130px;
+    }
+
+    .btn-gold {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .quiz-option {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .btn-whatsapp {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    /* Force the inline heading in your HTML to shrink on mobile */
+    .letter-content h2 {
+        font-size: 1.6em !important; 
+    }
 }
