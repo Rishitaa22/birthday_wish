@@ -1,4 +1,4 @@
-const birthdayDate = new Date("March 3, 2026 00:00:00").getTime();
+const birthdayDate = new Date("March 2, 2026 10:54:00").getTime();
 let countdownFinished = false;
 
 let isMusicPlaying = false;
@@ -161,4 +161,5 @@ function releaseBalloons() {
         balloon.style.animationDelay = (Math.random() * 0.5) + 's';
         container.appendChild(balloon);
     }
+
 }
