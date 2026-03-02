@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 21st Birthday Queen!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <audio id="bdayAudio" src="barbaad.mp3" loop></audio>
+
+    <button id="musicToggle" onclick="toggleMusic()">🎵</button>
+
+    <div id="balloon-container"></div>
+
+    <div class="card" id="mainCard">
+        
+        <div class="flip-card" id="photoCard">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="glam-photo.jpeg" alt="Beautiful Photo">
+                </div>
+                <div class="flip-card-back">
+                    <img src="funny-photo.jpeg" alt="Funny Photo">
+                </div>
+            </div>
+        </div>
+
+        <div id="initialView">
+            <h2 id="queen-text">QUEEN TURNING 21 IN</h2>
+            <div id="countdown" class="countdown-box">Loading...</div>
+            <button id="clickMeBtn" class="btn-gold" onclick="startPrank()">CLICK ME</button>
+        </div>
+
+        <div id="quizIntro">
+            <h3>Haha, u thought it was that easy? 😏</h3>
+            <p>Answer the questions correctly to unlock your gift!</p>
+            <button class="btn-gold" onclick="startQuiz()">READY</button>
+        </div>
+
+        <div id="quizContainer">
+            <h3 id="questionTitle">Question Text Here</h3>
+            <div id="optionsContainer">
+                </div>
+            <div id="feedbackText"></div>
+            <button id="nextBtn" class="btn-gold" onclick="goToNextQuestion()">NEXT</button>
+        </div>
+
+        <div id="quizEnd">
+            <h3>Score: 5/5 🎉</h3>
+            <p>Okay fine, you pass...</p>
+            <button class="btn-gold" onclick="revealRealMessage()">CONTINUE</button>
+        </div>
+
+        <div id="birthdayMessage">
+            <h1>Happy 21st, Ponnu! ✨</h1>
+            <p>Wishing you the absolute best day ever filled with love, laughter, and an unforgettable night.</p>
+            
+            <button class="btn-gold" style="padding: 10px 20px; font-size: 1em;" onclick="openLetter()">Claim your reward 🎁</button>
+        </div>
+
+        <div id="letterContainer" class="letter-content">
+            <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">My dearest Ponnu,</h2>
+            
+            <p>Happy Birthday to the girl who is not just my best friend, but my safe place, my comfort person, my home, and honestly my whole world.</p>
+            
+            <p>We’ve been together since kindergarten… like can you actually believe that? We literally grew up side by side. From tiny kids who didn’t even know what life was, to now people with dreams, goals, heartbreaks, plans, and chaos..And through every single phase, it was always you and me. Some people search their whole lives for a bond like this, and I got lucky enough to have it from the very beginning.</p>
+            
+            <p>Every time I come home for the weekend, it’s almost automatic — one whole day is yours. And I never even think twice about it. Because time with you is never “time spent,” it’s time that fills me up. Our random bike rides with no destination, wasting hours doing absolutely nothing but still having the best time, trying new food spots like food critics who know nothing, forcing each other to watch or listen to our favorites… those moments may look small from outside, but to me, they are everything. Those are the memories I replay when I miss you.</p>
+            
+            <p>You’re one of the funniest, most chaotic, creative, goal-driven people I know. Like actually how do you manage to be dramatic, wise, emotional, strong, and funny all at the same time? It’s a talent honestly.</p>
+            
+            <p>And I want you to know something.. I see your strength. I saw you go through heartbreak and still stand tall. I know you still haven’t completely moved on, and that’s okay. Healing isn’t a race. But I admire you so much for choosing to walk away even when all you wanted was to stay. That takes a kind of courage most people don’t have. I truly believe God knows what’s best for you, and everything happening right now is just preparing you to receive something so much better than you ever imagined. So sabar karo… and mind your things, okay? Life is cooking something big for you, I can feel it.</p>
+            
+            <p>Just so you know, I would fight anyone for you. No questions asked. No hesitation. That’s how much you mean to me.</p>
+            
+            <p>And our future? Iconic. Either we both marry rich, handsome men who treat us like queens… or we become the rich single aunties who don’t give a damn and live our best lives. You running your successful business, me running my startup, both of us traveling the world, probably arguing in foreign countries, and yes — a Porsche waiting in our driveway. Honestly, whichever version happens, I know one thing for sure: you and I will still be together, laughing the same way we do now.</p>
+            
+            <p>Thank you for being my constant in a world where everything keeps changing. Thank you for loving me the way you do. Thank you for existing.</p>
+            
+            <p>Happy Birthday, my Ponnu. I love you more than words can ever hold.</p>
+            
+            <div class="signature">
+                Forever yours,<br>
+                Rusi 🤍
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://wa.me/916235207348?text=I'm%20literally%20crying%20%F0%9F%98%AD%20Thank%20you%20for%20the%20website%20and%20the%20letter.%20I%20love%20you!" class="btn-whatsapp" target="_blank">Text Me Your Reaction 📱</a>
+                <br>
+                <button class="btn-gold" style="padding: 10px 20px; font-size: 0.9em; margin-top: 20px;" onclick="goBackToMessage()">Go Back</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
